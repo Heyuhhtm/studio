@@ -4,7 +4,6 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import { cn } from '@/lib/utils';
-import Footer from '@/components/layout/footer';
 
 const fontBody = Inter({
   subsets: ['latin'],
@@ -45,7 +44,6 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow pt-20">{children}</main>
-          <Footer />
         </div>
         <Toaster />
       </body>
