@@ -6,7 +6,7 @@ const AboutPage = () => {
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="text-center mb-12 animate-fadeInSlideUp">
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary">
-          About SafeSphere
+          SafeSphere
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
           We are dedicated to revolutionizing road safety through cutting-edge AI technology.
