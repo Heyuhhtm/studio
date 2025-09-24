@@ -38,7 +38,7 @@ export default function Home() {
             <Button size="lg" className="bg-primary text-primary-foreground font-bold shadow-lg hover:scale-105 transition-transform" onClick={() => setShowDetails(true)}>
               Read More
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-bold shadow-lg hover:scale-105 transition-transform border-white text-white hover:bg-white/10">
+            <Button asChild size="lg" variant="secondary" className="font-bold shadow-lg hover:scale-105 transition-transform bg-primary text-primary-foreground">
               <Link href="/about">Learn More</Link>
             </Button>
           </div>
@@ -57,7 +57,7 @@ export default function Home() {
                 <X className="h-6 w-6" />
                 <span className="sr-only">Close</span>
             </Button>
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary-foreground mb-8 text-center">About</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground mb-8 text-center">About</h2>
             <p className="max-w-4xl mx-auto text-lg text-muted-foreground text-justify">
                 The Accident Detector project is designed to enhance road safety and provide immediate assistance to accident victims. By using multiple sensors, including heart-rate monitors, sound detectors, and accelerometers/gyroscopes, the system can accurately detect vehicle accidents in real time. Once an accident is detected, the system automatically sends alerts via GSM/GPRS to the nearest hospital, police station, and registered family contacts, sharing the victim’s live location. This ensures that help arrives promptly, potentially saving lives and reducing the severity of injuries. Additionally, the system provides peace of mind to both drivers and their families, as it continuously monitors safety and acts as an intelligent emergency response solution. Overall, this project bridges the gap between accident occurrence and immediate assistance, making travel safer and more reliable for all users.
             </p>
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary-foreground">Why SafeSphere?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Why SafeSphere?</h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               A comprehensive safety net for every journey.
             </p>
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.2s' }}>
               <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary-foreground">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <ShieldCheck className="h-8 w-8" />
                 </div>
                 <CardTitle className="font-headline mt-4">Real-time Monitoring</CardTitle>
@@ -89,7 +89,7 @@ export default function Home() {
             </Card>
             <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.4s' }}>
               <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent-foreground">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <AlertTriangle className="h-8 w-8" />
                 </div>
                 <CardTitle className="font-headline mt-4">Instant Accident Detection</CardTitle>
@@ -127,13 +127,13 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">Monitor</h3>
               <p className="text-muted-foreground max-w-xs">The app continuously monitors driver vitals and vehicle status.</p>
             </div>
-            <ArrowRight className="hidden md:block text-primary-foreground h-12 w-12" />
+            <ArrowRight className="hidden md:block text-foreground h-12 w-12" />
             <div className="flex flex-col items-center">
               <div className="flex items-center justify-center h-20 w-20 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">2</div>
               <h3 className="text-xl font-semibold mb-2">Detect</h3>
               <p className="text-muted-foreground max-w-xs">AI analyzes data in real-time to detect anomalies or accidents.</p>
             </div>
-            <ArrowRight className="hidden md:block text-primary-foreground h-12 w-12" />
+            <ArrowRight className="hidden md:block text-foreground h-12 w-12" />
             <div className="flex flex-col items-center">
               <div className="flex items-center justify-center h-20 w-20 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">3</div>
               <h3 className="text-xl font-semibold mb-2">Alert</h3>
@@ -146,7 +146,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-background text-center">
          <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary-foreground">Ready to Drive with Confidence?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Ready to Drive with Confidence?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Join SafeSphere today and experience a new standard of road safety.
           </p>

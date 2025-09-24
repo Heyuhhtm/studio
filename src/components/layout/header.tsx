@@ -42,8 +42,7 @@ const Header = () => {
           <Link href="/" className="flex items-center gap-2">
             <Shield
               className={cn(
-                "h-8 w-8 transition-colors",
-                scrolled || !isHomePage ? "text-foreground" : "text-white"
+                "h-8 w-8 transition-colors text-primary",
               )}
             />
             <h1
@@ -63,15 +62,15 @@ const Header = () => {
                 href={link.href}
                 className={cn(
                   "font-semibold transition-colors relative",
-                  scrolled || !isHomePage ? "text-foreground/80 hover:text-primary-foreground" : "text-white/90 hover:text-white",
-                  pathname === link.href && (scrolled || !isHomePage ? "text-primary-foreground" : "text-white")
+                  scrolled || !isHomePage ? "text-foreground/80 hover:text-foreground" : "text-white/90 hover:text-white",
+                  pathname === link.href && (scrolled || !isHomePage ? "text-foreground" : "text-white")
                 )}
               >
                 {link.label}
                 {pathname === link.href && (
                   <span className={cn(
                     "absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-1 rounded-full",
-                     "bg-white"
+                     "bg-primary"
                   )} />
                 )}
               </Link>
@@ -95,8 +94,8 @@ const Header = () => {
                       key={link.href}
                       href={link.href}
                       className={cn(
-                        "font-semibold text-lg hover:text-primary-foreground transition-colors",
-                        pathname === link.href ? "text-primary-foreground" : "text-foreground"
+                        "font-semibold text-lg hover:text-primary transition-colors",
+                        pathname === link.href ? "text-primary" : "text-foreground"
                       )}
                     >
                       {link.label}
