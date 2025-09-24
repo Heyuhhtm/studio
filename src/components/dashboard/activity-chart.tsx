@@ -2,7 +2,7 @@
 
 import { Line, LineChart, CartesianGrid, XAxis, Tooltip, ResponsiveContainer } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { ChartTooltipContent } from "@/components/ui/chart"
+import { ChartContainer, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart"
 
 const activityData = [
   { name: 'Day 1', value: 300 },
@@ -14,6 +14,13 @@ const activityData = [
   { name: 'Day 7', value: 650 },
 ];
 
+const chartConfig = {
+  value: {
+    label: "Value",
+    color: "hsl(var(--primary))",
+  },
+} satisfies ChartConfig
+
 const ActivityChart = () => {
   return (
     <Card className="shadow-lg">
@@ -22,6 +29,7 @@ const ActivityChart = () => {
       </CardHeader>
       <CardContent>
         <div className="h-[250px] w-full">
+          <ChartContainer config={chartConfig} className="h-full w-full">
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                     data={activityData}
@@ -48,6 +56,7 @@ const ActivityChart = () => {
                     />
                 </LineChart>
             </ResponsiveContainer>
+          </ChartContainer>
         </div>
       </CardContent>
     </Card>
