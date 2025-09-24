@@ -6,7 +6,7 @@ export default function Home() {
     <div className="flex flex-col justify-center items-center min-h-[calc(100vh-80px)] text-center p-4">
       <div className="bg-card p-8 sm:p-12 md:p-16 rounded-3xl shadow-2xl animate-fadeInSlideUp">
         <h1 className="text-5xl md:text-7xl font-extrabold font-headline mb-4 text-primary">
-          Welcome to SafeSpher
+          Welcome to SafeSphere
         </h1>
         <p
           className="text-lg md:text-xl text-muted-foreground animate-fadeInSlideUp"

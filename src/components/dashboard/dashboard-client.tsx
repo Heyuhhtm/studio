@@ -76,7 +76,7 @@ const DashboardClient = () => {
         </div>
         
         <CardFooter className="p-4 sm:p-6 text-center text-muted-foreground text-sm border-t">
-          <p>© {new Date().getFullYear()} SafeSpher. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SafeSphere. All rights reserved.</p>
         </CardFooter>
       </Card>
     </div>

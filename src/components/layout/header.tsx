@@ -25,7 +25,7 @@ const Header = () => {
           <Link href="/" className="flex items-center gap-2">
             <Shield className="h-8 w-8 text-primary animate-pulse" />
             <h1 className="text-2xl font-bold font-headline text-primary">
-              SafeSpher
+              SafeSphere
             </h1>
           </Link>
 

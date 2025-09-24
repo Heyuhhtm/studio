@@ -16,7 +16,7 @@ const fontHeadline = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'SafeSpher',
+  title: 'SafeSphere',
   description: 'Your safety is our priority.',
 };
 

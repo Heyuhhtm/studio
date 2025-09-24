@@ -2,7 +2,7 @@ import DashboardClient from "@/components/dashboard/dashboard-client";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dashboard - SafeSpher',
+  title: 'Dashboard - SafeSphere',
   description: 'Live monitoring and emergency dashboard.',
 };
 

@@ -21,7 +21,7 @@ const LoginPage = () => {
         <CardContent className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="username">Username</Label>
-            <Input id="username" placeholder="safespher_user" />
+            <Input id="username" placeholder="safesphere_user" />
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
