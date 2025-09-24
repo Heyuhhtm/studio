@@ -23,8 +23,8 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-red-500 animate-pulse" />
-            <h1 className="text-2xl font-bold font-headline text-red-500">
+            <Shield className="h-8 w-8 text-primary" />
+            <h1 className="text-2xl font-bold font-headline text-primary">
               SafeSphere
             </h1>
           </Link>
