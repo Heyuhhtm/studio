@@ -1,28 +1,138 @@
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ShieldCheck, AlertTriangle, Zap, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
+  const heroImage = PlaceHolderImages.find(p => p.id === 'live-view-placeholder');
+  
   return (
-    <div className="flex flex-col justify-center items-center min-h-[calc(100vh-80px)] text-center p-4">
-      <div className="bg-card p-8 sm:p-12 md:p-16 rounded-3xl shadow-2xl animate-fadeInSlideUp">
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline mb-4 text-primary">
-          Welcome to SafeSphere
-        </h1>
-        <p
-          className="text-lg md:text-xl text-muted-foreground animate-fadeInSlideUp"
-          style={{ animationDelay: '0.3s' }}
-        >
-          Your safety is our priority.
-        </p>
-        <div
-          className="mt-8 animate-fadeInSlideUp"
-          style={{ animationDelay: '0.6s' }}
-        >
-          <Button asChild size="lg" className="bg-gradient-to-r from-primary to-accent text-primary-foreground font-bold shadow-lg hover:scale-105 transition-transform">
-            <Link href="/dashboard">Go to Dashboard</Link>
-          </Button>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white p-4">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt="Road view from a car"
+            fill
+            className="object-cover -z-10 brightness-50"
+            data-ai-hint={heroImage.imageHint}
+            priority
+          />
+        )}
+        <div className="animate-fadeInSlideUp space-y-6">
+          <h1 className="text-4xl md:text-6xl font-extrabold font-headline">
+            The Future of Road Safety is Here.
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-white/90">
+            SafeSphere's AI-powered platform predicts, prevents, and responds to accidents in real-time, keeping you and your loved ones safe on the road.
+          </p>
+          <div className="flex justify-center gap-4">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground font-bold shadow-lg hover:scale-105 transition-transform">
+              <Link href="/dashboard">Go to Dashboard</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-bold shadow-lg hover:scale-105 transition-transform border-white text-white hover:bg-white/10">
+              <Link href="/about">Learn More</Link>
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Why SafeSphere?</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              A comprehensive safety net for every journey.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.2s' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <ShieldCheck className="h-8 w-8" />
+                </div>
+                <CardTitle className="font-headline mt-4">Real-time Monitoring</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Live tracking of vitals and vehicle data to assess risk levels continuously.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.4s' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent">
+                  <AlertTriangle className="h-8 w-8" />
+                </div>
+                <CardTitle className="font-headline mt-4">Instant Accident Detection</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Our AI instantly detects accidents using sensor data and triggers alerts.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.6s' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                  <Zap className="h-8 w-8" />
+                </div>
+                <CardTitle className="font-headline mt-4">Automated Emergency Response</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Automatically contacts emergency services with your location and vitals.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline mb-12">How It Works</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-20 w-20 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">1</div>
+              <h3 className="text-xl font-semibold mb-2">Monitor</h3>
+              <p className="text-muted-foreground max-w-xs">The app continuously monitors driver vitals and vehicle status.</p>
+            </div>
+            <ArrowRight className="hidden md:block text-primary h-12 w-12" />
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-20 w-20 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">2</div>
+              <h3 className="text-xl font-semibold mb-2">Detect</h3>
+              <p className="text-muted-foreground max-w-xs">AI analyzes data in real-time to detect anomalies or accidents.</p>
+            </div>
+            <ArrowRight className="hidden md:block text-primary h-12 w-12" />
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center h-20 w-20 rounded-full bg-primary text-primary-foreground font-bold text-2xl mb-4">3</div>
+              <h3 className="text-xl font-semibold mb-2">Alert</h3>
+              <p className="text-muted-foreground max-w-xs">Emergency services and contacts are instantly alerted with critical data.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Final CTA */}
+      <section className="py-16 md:py-24 bg-card text-center">
+         <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Ready to Drive with Confidence?</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            Join SafeSphere today and experience a new standard of road safety.
+          </p>
+          <div className="mt-8">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground font-bold shadow-lg hover:scale-105 transition-transform">
+                <Link href="/dashboard">Get Started Now</Link>
+            </Button>
+          </div>
+         </div>
+      </section>
     </div>
   );
 }
