@@ -15,7 +15,7 @@ const LoginPage = () => {
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] p-4">
       <Card className="w-full max-w-sm animate-fadeInSlideUp shadow-2xl">
         <CardHeader className="text-center">
-          <CardTitle className="text-3xl font-headline text-primary">Login</-CardTitle>
+          <CardTitle className="text-3xl font-headline text-primary">Login</CardTitle>
           <CardDescription>Enter your credentials to access your dashboard.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
