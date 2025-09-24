@@ -57,7 +57,7 @@ export default function Home() {
                 <X className="h-6 w-6" />
                 <span className="sr-only">Close</span>
             </Button>
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary mb-8 text-center">About The Project</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary mb-8 text-center">About</h2>
             <p className="max-w-4xl mx-auto text-lg text-muted-foreground text-justify">
                 The Accident Detector project is designed to enhance road safety and provide immediate assistance to accident victims. By using multiple sensors, including heart-rate monitors, sound detectors, and accelerometers/gyroscopes, the system can accurately detect vehicle accidents in real time. Once an accident is detected, the system automatically sends alerts via GSM/GPRS to the nearest hospital, police station, and registered family contacts, sharing the victim’s live location. This ensures that help arrives promptly, potentially saving lives and reducing the severity of injuries. Additionally, the system provides peace of mind to both drivers and their families, as it continuously monitors safety and acts as an intelligent emergency response solution. Overall, this project bridges the gap between accident occurrence and immediate assistance, making travel safer and more reliable for all users.
             </p>
