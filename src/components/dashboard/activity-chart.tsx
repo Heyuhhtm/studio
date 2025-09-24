@@ -17,7 +17,7 @@ const activityData = [
 const chartConfig = {
   value: {
     label: "Value",
-    color: "hsl(var(--primary))",
+    color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig
 
@@ -49,10 +49,10 @@ const ActivityChart = () => {
                     <Line
                         type="monotone"
                         dataKey="value"
-                        stroke="hsl(var(--primary))"
+                        stroke="hsl(var(--chart-1))"
                         strokeWidth={2}
-                        dot={{ r: 4, fill: "hsl(var(--primary))" }}
-                        activeDot={{ r: 8, fill: "hsl(var(--primary))", stroke: "hsl(var(--background))", strokeWidth: 2 }}
+                        dot={{ r: 4, fill: "hsl(var(--chart-1))" }}
+                        activeDot={{ r: 8, fill: "hsl(var(--chart-1))", stroke: "hsl(var(--background))", strokeWidth: 2 }}
                     />
                 </LineChart>
             </ResponsiveContainer>

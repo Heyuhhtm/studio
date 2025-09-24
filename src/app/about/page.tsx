@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="text-center mb-12 animate-fadeInSlideUp">
-        <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary">
+        <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary-foreground">
           About SafeSphere
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
@@ -16,7 +16,7 @@ const AboutPage = () => {
       <div className="grid md:grid-cols-3 gap-8 text-center">
         <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.2s' }}>
           <CardHeader>
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary-foreground">
               <Target className="h-8 w-8" />
             </div>
             <CardTitle className="font-headline mt-4">Our Mission</CardTitle>
@@ -29,7 +29,7 @@ const AboutPage = () => {
         </Card>
         <Card className="animate-fadeInSlideUp" style={{ animationDelay: '0.4s' }}>
           <CardHeader>
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 text-accent-foreground">
               <Zap className="h-8 w-8" />
             </div>
             <CardTitle className="font-headline mt-4">Our Technology</CardTitle>
