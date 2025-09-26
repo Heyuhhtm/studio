@@ -3,7 +3,7 @@ import { Users, Target, Zap } from 'lucide-react';
 
 const AboutPage = () => {
   return (
-    <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div className="container mx-auto px-4 pt-28 pb-12 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary">
           SafeSphere
