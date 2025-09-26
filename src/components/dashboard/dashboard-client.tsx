@@ -75,9 +75,12 @@ const DashboardClient = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center justify-center font-sans">
-        <div className="text-xl text-red-500">Error: Could not fetch data. Please check the API connection.</div>
-        <p className="text-sm text-gray-500 mt-2">Details: {error}</p>
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center justify-center font-sans text-center">
+        <div className="text-xl text-red-500">Error: Could not connect to the API.</div>
+        <p className="text-sm text-gray-500 mt-2 max-w-md">
+          This could be due to a network issue, the API server being offline, or a CORS policy. Please ensure you are on the same network as the API and that the server is running.
+        </p>
+         <p className="text-xs text-gray-500 mt-2">Details: {error}</p>
       </div>
     );
   }
@@ -174,3 +177,5 @@ const DashboardClient = () => {
 };
 
 export default DashboardClient;
+
+    
