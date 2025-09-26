@@ -1,41 +1,29 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const data = {
-    status: "CRITICAL",
-    patient_info: {
-      name: "Alex Doe",
-      blood_type: "O+",
-      pre_existing_conditions: "None",
-      emergency_contact: "+1-123-456-7890",
-    },
-    last_data: {
-      location: {
-        lat: 34.0522,
-        lon: -118.2437,
+  try {
+    const response = await fetch('http://172.16.142.125:5000/api/status', {
+      headers: {
+        'Content-Type': 'application/json',
       },
-      impact: {
-        g_force: 5.2,
-      },
-      environment: {
-        in_car_motion: false,
-        is_voice_detected: true,
-      },
-      manual_override: {
-        sos_button_pressed: true,
-      },
-    },
-    emergency_details: {
-      services_alerted: {
-        hospital: {
-          name: "City General Hospital",
-        },
-        police: {
-          name: "LAPD Central Division",
-        },
-      },
-    },
-  };
+    });
 
-  return NextResponse.json(data);
+    if (!response.ok) {
+      const errorText = await response.text();
+      // Forward the error from the external API
+      return new NextResponse(
+        `Error fetching from external API: ${response.status} ${response.statusText} - ${errorText}`,
+        { status: response.status }
+      );
+    }
+
+    const data = await response.json();
+    return NextResponse.json(data);
+  } catch (error: any) {
+    // Handle network errors or other issues with the fetch call itself
+    return new NextResponse(
+      `Internal Server Error: ${error.message}`,
+      { status: 500 }
+    );
+  }
 }
