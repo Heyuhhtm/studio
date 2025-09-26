@@ -39,7 +39,8 @@ const DashboardClient = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch('http://172.16.142.125:5000/api/status')
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://172.16.142.125:5000/api/status';
+      fetch(apiUrl)
         .then(response => {
           if (!response.ok) {
             throw new Error('Network response was not ok');
