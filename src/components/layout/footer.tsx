@@ -16,9 +16,6 @@ const Footer = () => {
               </h1>
             </Link>
             <p className="text-sm text-muted-foreground">Copyright 2025 All Rights Reserved.</p>
-            <p className="text-xs text-muted-foreground">
-              Nauts and the Nauts logo are registered trademarks of Nauts, Inc. in The United States and other countries.
-            </p>
           </div>
 
           {/* Links Sections */}
