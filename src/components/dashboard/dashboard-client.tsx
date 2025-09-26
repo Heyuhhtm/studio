@@ -39,7 +39,7 @@ const DashboardClient = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://172.16.142.125:5000/api/status';
+      const apiUrl = '/api/status';
       fetch(apiUrl)
         .then(response => {
           if (!response.ok) {
