@@ -35,7 +35,7 @@ const DashboardClient = () => {
   const [isEmergency, setIsEmergency] = useState(false);
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = () => {
@@ -67,16 +67,17 @@ const DashboardClient = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center font-sans">
-        <div className="text-xl">Loading...</div>
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center justify-center font-sans">
+        <div className="text-xl">Loading Dashboard...</div>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center font-sans">
-        <div className="text-xl text-red-500">Error: {error}</div>
+      <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-8 flex flex-col items-center justify-center font-sans">
+        <div className="text-xl text-red-500">Error: Could not fetch data. Please check the API connection.</div>
+        <p className="text-sm text-gray-500 mt-2">Details: {error}</p>
       </div>
     );
   }
