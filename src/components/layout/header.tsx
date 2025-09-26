@@ -29,6 +29,7 @@ const Header = () => {
   }, []);
 
   const isHomePage = pathname === '/';
+  const headerTextColor = scrolled || !isHomePage ? "text-foreground" : "text-white";
 
   return (
     <header
@@ -48,7 +49,7 @@ const Header = () => {
             <h1
               className={cn(
                 "text-2xl font-bold font-headline transition-colors",
-                scrolled || !isHomePage ? "text-foreground" : "text-white"
+                headerTextColor
               )}
             >
               SafeSphere
@@ -63,7 +64,7 @@ const Header = () => {
                 className={cn(
                   "font-semibold transition-colors relative",
                   scrolled || !isHomePage ? "text-foreground/80 hover:text-foreground" : "text-white/90 hover:text-white",
-                  pathname === link.href && (scrolled || !isHomePage ? "text-foreground" : "text-white")
+                  pathname === link.href && headerTextColor
                 )}
               >
                 {link.label}
@@ -81,7 +82,8 @@ const Header = () => {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className={cn(
-                  scrolled || !isHomePage ? "text-foreground" : "text-white hover:bg-white/10"
+                  headerTextColor,
+                  "hover:bg-white/10"
                 )}>
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
