@@ -12,7 +12,7 @@ const DashboardClient = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      const apiUrl = '/api/status';
+      const apiUrl = 'http://172.16.142.125:5000/api/status';
       fetch(apiUrl)
         .then(response => {
           if (!response.ok) {
