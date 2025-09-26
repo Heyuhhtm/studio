@@ -4,7 +4,7 @@ import { Users, Target, Zap } from 'lucide-react';
 const AboutPage = () => {
   return (
     <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <div className="text-center mb-12 animate-fadeInSlideUp">
+      <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold font-headline text-primary">
           SafeSphere
         </h1>
@@ -14,7 +14,7 @@ const AboutPage = () => {
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 text-center">
-        <Card className="animate-fadeInSlideUp bg-primary/5 border-primary/20" style={{ animationDelay: '0.2s' }}>
+        <Card className="bg-primary/5 border-primary/20">
           <CardHeader>
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Target className="h-8 w-8" />
@@ -27,7 +27,7 @@ const AboutPage = () => {
             </p>
           </CardContent>
         </Card>
-        <Card className="animate-fadeInSlideUp bg-primary/5 border-primary/20" style={{ animationDelay: '0.4s' }}>
+        <Card className="bg-primary/5 border-primary/20">
           <CardHeader>
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Zap className="h-8 w-8" />
@@ -40,7 +40,7 @@ const AboutPage = () => {
             </p>
           </CardContent>
         </Card>
-        <Card className="animate-fadeInSlideUp bg-primary/5 border-primary/20" style={{ animationDelay: '0.6s' }}>
+        <Card className="bg-primary/5 border-primary/20">
           <CardHeader>
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Users className="h-8 w-8" />

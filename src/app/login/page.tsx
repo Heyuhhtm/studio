@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 const LoginPage = () => {
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] p-4">
-      <Card className="w-full max-w-sm animate-fadeInSlideUp shadow-2xl">
+      <Card className="w-full max-w-sm shadow-2xl">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-headline text-foreground">Login</CardTitle>
           <CardDescription>Enter your credentials to access your dashboard.</CardDescription>

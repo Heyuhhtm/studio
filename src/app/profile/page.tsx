@@ -4,7 +4,7 @@ import { User, Mail, ShieldQuestion } from 'lucide-react';
 const ProfilePage = () => {
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] p-4">
-      <Card className="w-full max-w-md animate-fadeInSlideUp shadow-2xl">
+      <Card className="w-full max-w-md shadow-2xl">
         <CardHeader className="text-center">
           <CardTitle className="text-3xl font-headline text-primary-foreground">User Profile</CardTitle>
         </CardHeader>
